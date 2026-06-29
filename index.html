@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Загрузка...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="spinner-wrap" id="spinner">
+      <div class="ring"></div>
+      <div class="ring ring-2"></div>
+    </div>
+    <div class="check" id="check">✓</div>
+
+    <h1 id="title">Загружаем страницу</h1>
+    <p class="sub" id="status">Пожалуйста, подождите…</p>
+
+    <div class="bar-wrap">
+      <div class="bar-fill" id="bar"></div>
+    </div>
+    <p class="pct" id="pct">0%</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
