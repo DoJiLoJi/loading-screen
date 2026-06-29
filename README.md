@@ -4,6 +4,10 @@
 
 Анимированный экран загрузки с прогресс-баром, выполненный на HTML, CSS и JavaScript.
 
+## Демонстрация
+
+![Demo](demo.gif)
+
 ## Выбранный проект из каталога
 
 [Build A Loading Screen](https://medium.freecodecamp.org/how-to-build-a-delightful-loading-screen-in-5-minutes-847991da509f)
