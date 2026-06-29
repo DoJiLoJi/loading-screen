@@ -1,3 +1,5 @@
+[![Maintainability](https://qlty.sh/gh/DoJiLoJi/projects/loading-screen/maintainability.svg)](https://qlty.sh/gh/DoJiLoJi/projects/loading-screen)
+
 # Loading Screen
 
 Анимированный экран загрузки с прогресс-баром, выполненный на HTML, CSS и JavaScript.
