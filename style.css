@@ -1,0 +1,107 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #faf6f0;
+  --blue:  #6bb8d4;
+  --blue2: #a8d8ea;
+  --blue3: #e8f6fb;
+  --text:  #4a5568;
+  --soft:  #9fb3be;
+}
+
+body {
+  background: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px 44px 40px;
+  width: min(360px, 92vw);
+  box-shadow: 0 2px 20px rgba(107,184,212,0.15);
+  text-align: center;
+}
+
+/* ---- spinner ---- */
+.spinner-wrap {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid var(--blue3);
+  border-top-color: var(--blue);
+  animation: spin 1.2s linear infinite;
+}
+.ring-2 {
+  inset: 14px;
+  border-top-color: transparent;
+  border-bottom-color: var(--blue2);
+  animation-duration: 1.8s;
+  animation-direction: reverse;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- done ---- */
+.check {
+  display: none;
+  width: 72px; height: 72px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: var(--blue3);
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 300;
+  align-items: center;
+  justify-content: center;
+  animation: pop .35s cubic-bezier(.175,.885,.32,1.275);
+}
+@keyframes pop { from{ transform:scale(0) } to{ transform:scale(1) } }
+
+/* ---- text ---- */
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.sub {
+  font-size: 13px;
+  color: var(--soft);
+  margin-bottom: 28px;
+  min-height: 20px;
+}
+
+/* ---- bar ---- */
+.bar-wrap {
+  background: var(--blue3);
+  border-radius: 100px;
+  height: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--blue2), var(--blue));
+  transition: width .35s ease;
+}
+.pct {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
